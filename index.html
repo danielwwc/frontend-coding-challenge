@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Stylight Frontend Developer Task</title>
+    <!-- Put your own styles into this file. -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="main-wrapper">
+        <header>
+            <div class="title">Stylight Currency Converter</div>
+        </header>
+        <section class="content-wrapper">
+            <!-- loader -->
+            <div id="loader"></div>
+
+            <!-- Source Currency -->
+            <div class="input-group">
+                <span class="input-label" id="source-cur-symbol"></span>
+                <input type="number" class="input-amount" id="source-cur-amount" value="">
+                <button type="button" class="button button-select-currency" id="source-currency"></button>
+                <div id="source-currency-menu" class="dropdown-menu" style="display:none;">
+                    <ul></ul>
+                </div>
+            </div>
+
+            <!-- Switch Currency Input -->
+            <img id="img-switch" src="./assets/switch.svg" alt="switch currency" />
+
+            <!-- Target Currency Input -->
+            <div class="input-group">
+                <span class="input-label" id="target-cur-symbol"></span>
+                <input type="number" class="input-amount" id="target-cur-amount" readonly="readonly" value="">
+                <button type="button" class="button button-select-currency" id="target-currency"></button>
+                <div id="target-currency-menu" class="dropdown-menu" style="display:none;">
+                    <ul></ul>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- Use the `axios` library for making Ajax requests. -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!-- Put your own JavaScript into this file. -->
+    <script src="scripts.js"></script>
+</body>
+
+</html>

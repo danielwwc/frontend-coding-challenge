@@ -1,0 +1,249 @@
+/* Your styles go here. */
+/*
+    1. Demostrate using BEM methodologies
+    2. Demostrate using responsive design
+    3. Demostrate using animation
+*/
+
+html body:last-child {
+    font-family: "helvetica";
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #f0f0f0;
+}
+
+/* html div + span {
+    background: lightgray;
+    display: block;
+    margin: 20px auto;
+    max-width: 300px;
+    padding: 1rem;
+} */
+
+header {
+    padding: 30px;
+    background: #29ceb5;
+    color: #FfFfff;
+}
+header .title {
+    text-align: center;
+    font-size: 24px;
+}
+
+.main-wrapper {
+    width: 100%;
+}
+
+.content-wrapper {
+    position: relative;
+    text-align: center;
+    padding: 10px;
+}
+
+/* INPUT */
+.input-group {
+    margin-top: 50px;
+    width: 80%;
+    display: inline-block;
+    padding: 30px 0px 30px 0px;
+    background:  #FfFfff;
+    border-radius: 10px;
+    box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.15);
+}
+
+.input-group .input-label {
+    color: #d1d1d1;
+    padding: 0px 5px;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.input-amount {
+    width: 50%;
+    border: none;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+#target-cur-amount{
+    color: #d1d1d1;
+}
+/* BUTTON */
+.button {
+    border: 0;
+    font-size: 20px;
+    font-weight: 400;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.button:focus {
+    outline: none;
+    background-color: transparent;
+}
+
+.button-select-currency {
+    color: #29ceb5;
+    transition: transform 0.3s;
+}
+
+.button-select-currency:hover {
+    transform: scale(1.1);
+}
+
+.button-select-currency:after {
+    content: '\2023';
+    display: inline-block;
+    transform: rotate(90deg);
+    margin-left: 8px;
+}
+
+#img-switch {
+    width: 50px;
+    height: 50px;
+    margin: 35px 90px 0px 90px;
+    transform: rotate(90deg);
+    padding: 8px;
+    background-color: #29ceb5;
+    border-radius: 50%;
+    box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.15);
+    vertical-align: middle;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+/*
+#img-switch:hover {
+     transform: rotate(450deg);
+}
+*/
+
+
+/* LOADER */
+#loader {
+    border: 5px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 5px solid #29ceb5;
+    width: 40px;
+    height: 40px;
+    left: 50%;
+    position: absolute;
+    margin: 0px 0px 0px -25px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* DROPDOWN MENU */
+.dropdown-menu {
+    right: 10%;
+    position: absolute;
+    margin-top: 55px;
+    background: #FfFfff;
+    width: 200px;
+    border-radius: 10px;
+    box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.15);
+    z-index: 2;
+}
+
+.dropdown-menu:before {
+    content: "";
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    z-index: 1;
+    border: solid 15px transparent;
+    border-bottom-color: #FFF;
+}
+
+.dropdown-menu ul {
+    list-style: none;
+    display: inline;
+}
+
+.dropdown-menu ul li {
+    cursor: pointer;
+    padding: 10px 0px;
+}
+
+.dropdown-menu ul li:hover, .dropdown-menu ul li:hover a{
+    background: #29ceb5;
+    color: white;
+}
+
+.dropdown-menu .dropdown-item {
+    color: #29ceb5;
+    font-size: 20px;
+    font-weight: 400;
+    vertical-align: top;
+    padding: 10px;
+}
+
+/* DESKTOP VIEW */
+@media (min-width: 768px) {
+    header {
+        padding: 30px;
+    }
+
+    header .title {
+        font-size: 30px;
+        text-align: left;
+    }
+
+    /* INPUT */
+    .input-group {
+        margin-top: 100px;
+        padding: 30px 0px 30px 0px;
+        width: 200px;
+    }
+
+    .input-amount {
+        width: 90px;
+    }
+
+    #img-switch {
+        width: 35px;
+        height: 35px;
+        margin: 0px 90px;
+        transform: rotate(0deg);
+    }
+
+    #img-switch:hover {
+        transform: rotate(360deg);
+    }
+
+    /* DROPDOWN MENU */
+    .dropdown-menu {
+        right: auto;
+    }
+}
+
+/* FLAG */
+.flag {
+    width: 34px;
+    height: 20px;
+    display: inline-block;
+    background:url(./assets/flags_responsive.png) no-repeat;
+    background-size:100%
+}
+
+.flag-eu { 
+    background-position:0 0%
+}
+
+.flag-us { 
+    background-position:0 51%
+}
+
+.flag-jp { 
+    background-position:0 100%
+}
