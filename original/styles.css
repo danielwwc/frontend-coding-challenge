@@ -1,0 +1,23 @@
+/* Your styles go here. */
+
+html body:last-child {
+    font-family: "helvetica";
+}
+
+body div {
+    background: #29ceb5;
+    color: #FfFfff;
+    font-size: 30px;
+    font-weight: bold;
+    padding-left: 50px;
+    padding: 100px 0 25px;
+    text-align: center;
+}
+
+html div + span {
+    background: lightgray;
+    display: block;
+    margin: 20px auto;
+    max-width: 300px;
+    padding: 1rem;
+}
