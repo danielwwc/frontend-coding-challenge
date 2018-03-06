@@ -1,3 +1,7 @@
+# Preview the Solution
+
+https://rawgit.com/danielwwc/frontend-coding-challenge/master/index.html
+
 # Frontend Developer task
 
 - Your task is to implement a basic currency converter which converts values between Euro, US Dollar and Japanese Yen.
